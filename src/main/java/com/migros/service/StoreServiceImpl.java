@@ -9,6 +9,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -29,5 +31,21 @@ public class StoreServiceImpl implements IStoreService {
         storeDto.setId(storeDb.getId());
         storeDto.setCreateTime(storeDb.getCreateTime());
         return storeDto;
+    }
+
+    @Override
+    public List<StoreDto> getAll() {
+        List<Store> storeList = storeRepository.findAll();
+        List<StoreDto> storeDtoList = new ArrayList<>();
+        storeList.forEach(item -> {
+            StoreDto storeDto = new StoreDto();
+            storeDto.setId(item.getId());
+            storeDto.setName(item.getName());
+            storeDto.setLat(item.getLat());
+            storeDto.setLng(item.getLng());
+            storeDto.setCreateTime(item.getCreateTime());
+            storeDtoList.add(storeDto);
+        });
+        return storeDtoList;
     }
 }

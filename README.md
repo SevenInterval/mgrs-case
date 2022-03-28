@@ -25,3 +25,8 @@ Content-Length: 91
     "lng": "26.1655118"
 }
 ````
+### Get All Stores:
+````
+GET /api/store HTTP/1.1
+Host: localhost:8080
+````
