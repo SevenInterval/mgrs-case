@@ -7,6 +7,6 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class StoreException extends Exception {
+public class CommonException extends Exception {
     private String errorMessage;
 }

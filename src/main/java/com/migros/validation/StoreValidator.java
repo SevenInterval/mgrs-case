@@ -1,20 +1,20 @@
 package com.migros.validation;
 
 import com.migros.dto.StoreDto;
-import com.migros.utility.StoreException;
+import com.migros.utility.CommonException;
 import org.springframework.stereotype.Component;
 
 @Component
 public class StoreValidator {
-    public void checkStoreDto(StoreDto storeDto) throws StoreException {
+    public void checkStoreDto(StoreDto storeDto) throws CommonException {
         if(storeDto.getName() == null || storeDto.getName() == "") {
-            throw new StoreException("Store name can not be null or empty!");
+            throw new CommonException("Store name can not be null or empty!");
         }
         if(storeDto.getLat() == null) {
-            throw new StoreException("Store lat can not be null");
+            throw new CommonException("Store lat can not be null");
         }
         if(storeDto.getLng() == null) {
-            throw new StoreException("Store lng can not be null");
+            throw new CommonException("Store lng can not be null");
         }
     }
 }

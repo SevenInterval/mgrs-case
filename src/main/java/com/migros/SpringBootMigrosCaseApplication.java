@@ -3,7 +3,6 @@ package com.migros;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.migros.dto.StoreDto;
-import com.migros.model.Store;
 import com.migros.service.IStoreService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,7 +36,6 @@ public class SpringBootMigrosCaseApplication {
                     storeService.saveStore(store);
                 }
                 logger.info("First store commit succesfully saved!");
-
             } catch (IOException e){
                 logger.error("saveStore error first runner: " + e.getMessage());
             }
