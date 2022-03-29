@@ -8,6 +8,6 @@ public interface ICourierRepository extends JpaRepository<Courier, Long> {
     @Query("SELECT c FROM Courier c WHERE c.courier = :courier and c.id=(SELECT MAX(d.id) FROM Courier d WHERE d.courier = :courier)")
     Courier getLastCourierData(String courier);
 
-    @Query("SELECT SUM(c.distance) FROM Courier c WHERE c.id=:id")
-    Double getSumDistanceOfCourier(Long id);
+    @Query("SELECT SUM(c.distance) FROM Courier c WHERE c.courier=:courier")
+    Double getSumDistanceOfCourier(String courier);
 }

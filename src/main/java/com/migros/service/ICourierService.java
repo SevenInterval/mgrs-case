@@ -9,5 +9,5 @@ import java.util.List;
 public interface ICourierService {
     void saveCourier(CourierDto courierDto) throws CommonException;
     List<Courier> getAllCouriers();
-    Double getTotalTravelDistance(Long courierId);
+    Double getTotalTravelDistance(String courier);
 }

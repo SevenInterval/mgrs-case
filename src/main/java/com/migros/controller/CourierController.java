@@ -26,9 +26,9 @@ public class CourierController {
         return ResponseEntity.ok(courierService.getAllCouriers());
     }
 
-    @GetMapping("/distance/{courierId}") // -> api/courier/distance/courierId
-    public ResponseEntity<?> getTotalTravelDistance(@PathVariable Long courierId) {
-        return ResponseEntity.ok(courierService.getTotalTravelDistance(courierId));
+    @GetMapping("/distance/{courier}") // -> api/courier/distance/courier
+    public ResponseEntity<?> getTotalTravelDistance(@PathVariable String courier) {
+        return ResponseEntity.ok(courierService.getTotalTravelDistance(courier));
     }
 
 }

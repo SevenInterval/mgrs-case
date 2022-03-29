@@ -55,8 +55,8 @@ public class CourierServiceImpl implements ICourierService {
     }
 
     @Override
-    public Double getTotalTravelDistance(Long id) {
-        Double totalTravelDistance = courierRepository.getSumDistanceOfCourier(id);
+    public Double getTotalTravelDistance(String courier) {
+        Double totalTravelDistance = courierRepository.getSumDistanceOfCourier(courier);
         return totalTravelDistance;
     }
 }
