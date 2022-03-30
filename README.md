@@ -12,7 +12,7 @@ you can access on the 8080 port.
 
 ## Endpoints:
 
-###Store Services;
+### Store Services;
 
 #### Save Store:
 ````
@@ -35,7 +35,7 @@ Host: localhost:8080
 ````
 
 
-###Courier Services;
+### Courier Services;
 
 #### Save Courier:
 ````
