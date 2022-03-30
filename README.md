@@ -12,7 +12,9 @@ you can access on the 8080 port.
 
 ## Endpoints:
 
-### Save Store:
+###Store Services;
+
+#### Save Store:
 ````
 POST /api/store HTTP/1.1
 Host: localhost:8080
@@ -25,8 +27,42 @@ Content-Length: 91
     "lng": "26.1655118"
 }
 ````
-### Get All Stores:
+
+#### Get All Stores:
 ````
 GET /api/store HTTP/1.1
 Host: localhost:8080
 ````
+
+
+###Courier Services;
+
+#### Save Courier:
+````
+POST /api/courier HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+Content-Length: 166
+
+{
+    "time": "2022-01-01T22:45:59",
+    "geolocation": {        
+        "lat": 40.986116,
+        "lng": 29.1161294
+    },
+    "courier": "Courier Rıdvan2"
+}
+````
+
+#### Get All Couriers:
+````
+GET /api/courier HTTP/1.1
+Host: localhost:8080
+````
+
+#### Get Courier Total Distance:
+````
+GET /api/courier/distance/Courier Rıdvan2 HTTP/1.1
+Host: localhost:8080
+````
+
