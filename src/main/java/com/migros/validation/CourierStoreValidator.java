@@ -1,7 +1,5 @@
 package com.migros.validation;
 
-import com.migros.dto.CourierDto;
-import com.migros.dto.StoreDto;
 import com.migros.model.Courier;
 import com.migros.model.CourierStore;
 import com.migros.model.Store;
